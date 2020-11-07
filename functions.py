@@ -20,12 +20,26 @@ def even_check():
 # если возраст больше 21 года, в противном случае верни
 # сообщение "Мы не продаём алкоголь несовершеннолетним."
 age = 17
-sell_alcohol()
+sell_alcohol() if age > 21 else print('Мы не продаём алкоголь несовершеннолетним.')
 
 
 # напиши функцию, которая проверит, является ли строка ключевым словом в Питоне
 # тебе понадобится модуль keyword, импортируй его и изучи с помощью dir()
 
+import keyword
+
+def keyword_check():
+    word = input('Введите строку: ')
+    keywords_list = dir(keyword)
+    flag = False
+    for count in range(0, len(keywords_list)-1):
+        if word in keywords_list[count]:
+            flag = True
+            break
+    print('Ваша строка является ключевым словом Python' if flag else 'Ваша строка не является ключевым словом Python')
+
+
+keyword_check()
 
 # напиши функцию, которая возвращает тип данных на русском языке:
 # число, строка, булевый, None, список, кортеж, множество, словарь
