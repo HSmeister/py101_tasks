@@ -2,7 +2,19 @@
 
 # напиши функцию, которая принимает на вход любое
 # количество чисел и сообщает, есть ли среди них чётное
-
+def even_check():
+    str = input('Введите числа через пробел: ')
+    number_list = list(str.split(' '))
+    print(number_list)
+    flag = True
+    for count in (0, len(number_list)-1):
+        if int(number_list[count]) % 2 == 0:
+            print('Среди ваших чисел есть чётное')
+            flag = False
+            break
+    print('Среди ваших чисел нет чётных') if flag else print()
+        
+    
 
 # используй тернарный оператор, чтобы вызвать функцию
 # если возраст больше 21 года, в противном случае верни
