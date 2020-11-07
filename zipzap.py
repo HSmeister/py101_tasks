@@ -7,6 +7,11 @@
 
 Тебе может понадобиться цикл for и ветвления
 """
+for count in range(1, 100+1):
+    if count % 3 == 0:
+        print('zip-zap' if count % 5 == 0 else'zip')
+    else:
+        print('zap' if count % 5 == 0 else (count))
 
 if __name__ == '__main__':
     pass
