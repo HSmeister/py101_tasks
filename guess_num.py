@@ -13,6 +13,25 @@
 
 Тебе может понадобится модуль random, цикл while и ветвления
 """
+import random
+MAX_VALUE = 1000000
+
+random_number = random.randrange(1, MAX_VALUE)
+print(random_number)
+trytoguess = input('Введите число: ')
+while trytoguess not in ('', 'exit'):
+    if not trytoguess.isdigit():
+        print('Введено не число!')
+    elif not (0 <( int_try := int(trytoguess)) < MAX_VALUE):
+        print('Число не входит в диапазон')
+    elif int_try == random_number:
+        print('Джекпот! Вы победили!')
+        break
+    elif int_try > random_number:
+        print('Упс! Ваше число больше загаданного:)')
+    else:
+        print('Упс! Ваше число меньше загаданного:)')
+    trytoguess = input(f'Введите число в диапазоне от 0 до {MAX_VALUE}: ')
 
 if __name__ == '__main__':
     pass
