@@ -45,3 +45,10 @@ keyword_check()
 # число, строка, булевый, None, список, кортеж, множество, словарь
 # пример: get_type("что-то") возвращает "Это строка."
 # пример2: get_type(42) возвращает "Это словарь."
+
+def get_type(object):
+    types_dict = {'int':'Число', 'bool':'Булевый', 'str':'Строка', 'NoneType':'None', 'list':'Список', 'tuple':'Кортеж', 'set':'Множество', 'dict':'Словарь' }
+    print('Вы ввели ' + types_dict[type(object).__name__])
+
+
+get_type(123)
